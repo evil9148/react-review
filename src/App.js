@@ -33,7 +33,7 @@ function App() {
         <div className='black-nav'>
           <h4>블로그임</h4>
         </div>
-        {title.map((c,idx)=><List idx={idx} title ={c} />)}
+        {title.map((c,idx)=><List key={idx} idx={idx}  />)}
         <button onClick={titleChange}>제목변경</button>
         <button onClick={titleSort}>가나다순</button>
         {modal && <Modal />}
